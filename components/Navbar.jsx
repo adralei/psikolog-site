@@ -23,11 +23,12 @@ export default function Navbar() {
 
         {/* Desktop menu */}
         <nav className="hidden md:flex gap-6 items-center">
-          <Link href="/#egitimler"><a className="hover:underline">Eğitimler</a></Link>
-          <Link href="/hizmetler"><a className="hover:underline">Hizmetler</a></Link>
-          <Link href="/basin"><a className="hover:underline">Basın</a></Link>
-          <Link href="/iletisim"><a className="px-4 py-2 rounded-md bg-accent text-white text-sm">İletişim</a></Link>
+            <Link href="/#egitimler" className="hover:underline">Eğitimler</Link>
+            <Link href="/hizmetler" className="hover:underline">Hizmetler</Link>
+            <Link href="/basin" className="hover:underline">Basın</Link>
+            <Link href="/iletisim" className="px-4 py-2 rounded-md bg-accent text-white text-sm">İletişim</Link>
         </nav>
+
 
         {/* Mobile hamburger */}
         <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="menu">
@@ -40,12 +41,12 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t">
-          <div className="px-4 py-3 space-y-2">
-            <a href="/#egitimler" className="block">Eğitimler</a>
-            <a href="/hizmetler" className="block">Hizmetler</a>
-            <a href="/basin" className="block">Basın</a>
-            <a href="/iletisim" className="block font-semibold text-accent">İletişim</a>
-          </div>
+        <div className="px-4 py-3 space-y-2">
+            <Link href="/#egitimler" className="block">Eğitimler</Link>
+            <Link href="/hizmetler" className="block">Hizmetler</Link>
+            <Link href="/basin" className="block">Basın</Link>
+            <Link href="/iletisim" className="block font-semibold text-accent">İletişim</Link>
+        </div>
         </div>
       )}
     </header>
