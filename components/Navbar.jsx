@@ -1,34 +1,27 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-/*
- Basit, responsive Navbar
- Mobilde hamburger -> açılır menü
- */
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-30">
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/">
-          <a className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center text-white font-semibold">EE</div>
-            <div className="hidden sm:block">
-              <div className="text-sm font-semibold">Psikolog Ece Erkan</div>
-              <div className="text-xs text-muted">Klinik Psikolog</div>
-            </div>
-          </a>
+        <Link href="/" className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center text-white font-semibold">EE</div>
+          <div className="hidden sm:block">
+            <div className="text-sm font-semibold">Psikolog Ece Erkan</div>
+            <div className="text-xs text-muted">Klinik Psikolog</div>
+          </div>
         </Link>
 
         {/* Desktop menu */}
         <nav className="hidden md:flex gap-6 items-center">
-            <Link href="/#egitimler" className="hover:underline">Eğitimler</Link>
-            <Link href="/hizmetler" className="hover:underline">Hizmetler</Link>
-            <Link href="/basin" className="hover:underline">Basın</Link>
-            <Link href="/iletisim" className="px-4 py-2 rounded-md bg-accent text-white text-sm">İletişim</Link>
+          <Link href="/#egitimler" className="hover:underline">Eğitimler</Link>
+          <Link href="/hizmetler" className="hover:underline">Hizmetler</Link>
+          <Link href="/basin" className="hover:underline">Basın</Link>
+          <Link href="/iletisim" className="px-4 py-2 rounded-md bg-accent text-white text-sm">İletişim</Link>
         </nav>
-
 
         {/* Mobile hamburger */}
         <button className="md:hidden" onClick={() => setOpen(!open)} aria-label="menu">
@@ -41,12 +34,12 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t">
-        <div className="px-4 py-3 space-y-2">
+          <div className="px-4 py-3 space-y-2">
             <Link href="/#egitimler" className="block">Eğitimler</Link>
             <Link href="/hizmetler" className="block">Hizmetler</Link>
             <Link href="/basin" className="block">Basın</Link>
             <Link href="/iletisim" className="block font-semibold text-accent">İletişim</Link>
-        </div>
+          </div>
         </div>
       )}
     </header>

@@ -1,9 +1,5 @@
 import ServiceCard from '../components/ServiceCard'
 
-/*
- Hizmetler sayfası. Terapi türlerini placeholder olarak burada listeledim.
- Örnek terapi başlıkları psikologbugrahankirbas sitesindeki başlıklara benzeyebilir.
-*/
 const terapiList = [
   { title: "Bireysel Psikoterapi", description: "Bireysel terapi ile duygusal süreçlerinizi keşfedin." },
   { title: "Çift ve Aile Terapisi", description: "İlişki dinamikleri, iletişim sorunları ve aile içi uyum." },
